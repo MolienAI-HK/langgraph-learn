@@ -79,7 +79,7 @@ function Install-Dependencies {
 function Start-Server {
     try {
         Write-Host "`n=== Starting server ===" -ForegroundColor Magenta
-        uvicorn food_analysis_api.main:app --reload
+        uvicorn food_analysis_api.main:app --reload --port 11080
     }
     catch {
         Write-Host "Failed to start server: $_" -ForegroundColor Red
